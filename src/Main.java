@@ -51,7 +51,9 @@ public class Main {
 					Main.menu(nome, 0, cc, poupanca);
 				} else if (f == 2) {
 					System.out.println("------- Operação finalizada! -------"); break;
-				} else System.out.println("------- Opção invalida! ------- \n------- Operação finalizada -------"); break;
+				} else {
+					System.out.println("------- Opção invalida! ------- \n------- Operação finalizada -------"); break;
+				}
 				
 		 	} else if (tipoconta == 2) {
 		 		System.out.print("\nDigite o valor a depositar na conta poupança: R$");
@@ -64,8 +66,13 @@ public class Main {
 					Main.menu(nome, 0, cc, poupanca);
 				} else if (f == 2) {
 					System.out.println("Operação finalizada!"); break;
-				} else System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+				} else {
+					System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+				}
 		 		
+		 	} else {
+		 		System.out.println("\n------- Opção invalida! -------\n------- Tente novamente -------");
+		 		Main.menu(nome, 0, cc, poupanca);
 		 	}
 		 	
 		case 2:
@@ -82,7 +89,9 @@ public class Main {
 					Main.menu(nome, 0, cc, poupanca);
 				} else if (f == 2) {
 					System.out.println("------- Operação finalizada! -------"); break;
-				} else System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+				} else {
+					System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+				}
 				
 		 	} else if (tipoconta == 2) {
 		 		System.out.print("\nDigite o valor a sacar na conta poupança: R$");
@@ -94,9 +103,13 @@ public class Main {
 				if (f == 1) {
 					Main.menu(nome, 0, cc, poupanca);
 				} else if (f == 2) {
-					System.out.println("------- Operação finalizada! -------"); break;
-				} else System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
-		 		
+						System.out.println("------- Operação finalizada! -------"); break;
+					} else {
+					System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+					}
+		 	} else {
+		 		System.out.println("\n------- Opção invalida! -------\n------- Tente novamente -------");
+		 		Main.menu(nome, 0, cc, poupanca);
 		 	}
 		 		
 		case 3:
@@ -113,7 +126,9 @@ public class Main {
 					Main.menu(nome, 0, cc, poupanca);
 				} else if (f == 2) {
 					System.out.println("------- Operação finalizada! -------"); break;
-				} else System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+				} else {
+					System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+				}
 				
 		 	} else if (tipoconta == 2) {
 		 		System.out.print("\nDigite o valor a transferir: R$");
@@ -126,7 +141,12 @@ public class Main {
 					Main.menu(nome, 0, cc, poupanca);
 				} else if (f == 2) {
 					System.out.println("------- Operação finalizada! -------"); break;
-				} else System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+				} else {
+					System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+				}
+		 	} else {
+		 		System.out.println("\n------- Opção invalida! -------\n------- Tente novamente -------");
+		 		Main.menu(nome, 0, cc, poupanca);
 		 	}
 		 	
 		case 4:
@@ -141,6 +161,9 @@ public class Main {
 				} else if (f == 2) {
 					System.out.println("------- Operação finalizada! -------"); break;
 				} else System.out.println("------- Opção invalida! -------\n------- Operação finalizada -------"); break;
+		default:
+			System.out.println("\n------- Opção invalida! -------\nEscolha novamente:");
+			Main.menu(nome, 0, cc, poupanca);
 		}
 		return opcao;
 	}
